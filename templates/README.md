@@ -1,0 +1,1 @@
+This folder contains _some_ of my template scripts.  I need to put pointers to the others like the metadata management system.  

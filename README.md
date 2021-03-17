@@ -76,6 +76,11 @@ Understanding data through data exploration is the biggest challenge faced today
 * [Lab 011: Data Discovery and Sandboxing with SQL Serverless](./Lab011.md) 
   * we also look at querying CSV and JSON data
 * [Lab 012: Data Discovery and Sandboxing with Spark](./Lab012.md) 
+  * ipynb notebook
+  * TODO working with ADLS2 notebook
+* [Lab 020: Shared Metadata](./Lab020.md)
+  * the 3 components of a Synapse Workspace share much of their metadata to aid in reuse.  We explore that in this lab.  
+* [Lab 021: Source Control](./Lab021.md)
 
 ### ETL/ELT Options
 
@@ -85,7 +90,7 @@ There are a lot of different ways to do ELT/ETL using Synapse.  We'll explore ea
 
 * [Lab 051: Best Practices for source controlling SQL scripts](./Lab051.md)
 
-[**Thinking about how to leverage your data lake to do ETL and exploratory analytics**](./etl-patterns.md).  Let's walk through what I think is THE BEST WAY to think about how to do data lake-driven ETL.  
+[**Thinking about how to leverage your data lake to do ETL and exploratory analytics**](./etl_patterns.md).  Let's walk through what I think is THE BEST WAY to think about how to do data lake-driven ETL.  
 
 * [Lab 055: Writing a SQL Script to copy data from one data lake zone to another](./Lab055.md)  
   * we use Serverless as a SQL-based ELT tool

@@ -3,7 +3,7 @@ search for TODO in this repo
 based on:  https://github.com/microsoft/MCW-Azure-Synapse-Analytics-and-AI
 
 
-
+https://github.com/Azure-Samples/Synapse/tree/main/Notebooks
 
 spark etl example:
     https://www.mssqltips.com/sqlservertip/6657/azure-synapse-analytics-data-integration-and-orchestration/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+MSSQLTips-LatestSqlServerTips+%28MSSQLTips+-+Latest+SQL+Server+Tips%29

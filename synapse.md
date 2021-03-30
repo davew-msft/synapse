@@ -50,6 +50,12 @@ Partitions are the next consideration:
 * when in doubt, partition by date
 * we want to leverage "partition elimination" as much as possible
 
+Remember, Synapse is an MPP, you need to think in those terms.  For example, this is a common theme:
+
+![](./img/issue.png)
+
+Why?  
+
 ### "Just give me the best practices"
 
 * Huge fact tables

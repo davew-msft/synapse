@@ -8,6 +8,8 @@ https://github.com/Azure-Samples/Synapse/tree/main/Notebooks
 spark etl example:
     https://www.mssqltips.com/sqlservertip/6657/azure-synapse-analytics-data-integration-and-orchestration/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+MSSQLTips-LatestSqlServerTips+%28MSSQLTips+-+Latest+SQL+Server+Tips%29
 
+parameter cells in notebooks
+
 Others:
 
 - [ ] https://github.com/microsoft/WhatTheHack/tree/master/019-ThisOldDataWarehouse

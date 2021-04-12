@@ -62,7 +62,7 @@ See [Synapse Workspace](./synapse.md)
 * [Lab 003 (Optional): Configure additional users to access a Synapse workspace](./Lab003.md).  You do not need to do this unless everyone in the workshop wants to share access to a single Synapse workspace.  
 
 ### Working with Linked Services
-* [Lab 005: creating a linked service to another storage account](./Lab005.md)  TODO:  doesn't work?
+* [Lab 005: creating a linked service to another storage account](./Lab005.md) 
 
 ### Data Discovery and Sandboxing
 
@@ -76,8 +76,8 @@ Understanding data through data exploration is the biggest challenge faced today
 * [Lab 011: Data Discovery and Sandboxing with SQL Serverless](./Lab011.md) 
   * we also look at querying CSV and JSON data
 * [Lab 012: Data Discovery and Sandboxing with Spark](./Lab012.md) 
-  * ipynb notebook
-  * TODO working with ADLS2 notebook
+  * we do basic data lake queries using Spark
+  * we will use Lab 052 for a much deeper dive later
 * [Lab 020: Shared Metadata](./Lab020.md)
   * the 3 components of a Synapse Workspace share much of their metadata to aid in reuse.  We explore that in this lab.  
 * [Lab 021: Source Control](./Lab021.md)
@@ -86,19 +86,27 @@ Understanding data through data exploration is the biggest challenge faced today
 
 There are a lot of different ways to do ELT/ETL using Synapse.  We'll explore each way in this section:  
 
-* [Lab 050: Understanding Data Factory Best Practices](./Lab050.md)
+| Topic | Lab Name | Description|
+|------|------|------|
+|General Setup|[Lab 050: Understanding Data Factory Best Practices](./Lab050.md)|Even if you are not planning to use ADF/Synapse "Integrate" experience, you will likely want to version control your notebooks and SQL files.  We cover things like gitflow as well.|
+|General Setup|[Lab 051: Best Practices for source controlling SQL scripts](./Lab051.md)|Let's walk through what I think is THE BEST WAY to think about how to do data lake-driven ETL.|
+|General Setup|[**Thinking about how to leverage your data lake to do ETL and exploratory analytics**](./etl_patterns.md)||
+|Spark|[Lab 052:  Manipulating a Data Lake with Spark](./notebooks/Lab052.ipynb)|  <li> Import `./notebooks/Lab052.ipynb` directly in your Synapse workspace under Notebooks. <li> Read the instructions and complete the lab|
+|Spark|[Lab 053:  Understanding Delta Tables with Spark](./notebooks/Lab053.ipynb)|We'll explore using Delta tables from Synapse Spark pools TODO|
+|Spark|[Lab 054: Sharing Data Between SparkSQL, Scala, and pySpark](./notebooks/Lab054.ipynb)|Using multiple languages in Spark is the key to solving problems, but sharing variables and dataframes isn't always intuitive.  We'll also look at how to persist data so Serverless Pools can access it. WIP/TODO...see version in workspace|
+||||
+||||
 
-* [Lab 051: Best Practices for source controlling SQL scripts](./Lab051.md)
-
-[**Thinking about how to leverage your data lake to do ETL and exploratory analytics**](./etl_patterns.md).  Let's walk through what I think is THE BEST WAY to think about how to do data lake-driven ETL.  
-
+#### Using SQL Serverless
 * [Lab 055: Writing a SQL Script to copy data from one data lake zone to another](./Lab055.md)  
   * we use Serverless as a SQL-based ELT tool
-* [Lab 056: Using Spark to write data into Synapse SQL Pools](./Lab056.md)
+
+### Spark to Synapse Dedicated Pools
+* [Lab 056: Using Spark to write data into Synapse SQL Pools (Dedicated)](./Lab056.md)
 * [Lab 056a: Using Spark to write data into Synapse SQL Pools - .NET version](./Lab056a.md)
 
+### The ADF (Integrate) box-and-line tools
 * [Lab 057: Loading Data from a Data Lake into Synapse SQL Pool using the "Integrate" box-and-line experience (ADF Copy Activity)](./Lab057.md) 
-
 * [Lab 058: Loading Data from a Data Lake into Synapse SQL Pool using the "Integrate" box-and-line experience (ADF Dataflows)](./Lab058.md) 
 
 TODO:  load campaign analytics table, might be good for ADF data flows.  

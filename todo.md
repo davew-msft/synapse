@@ -2,6 +2,8 @@ search for TODO in this repo
 
 based on:  https://github.com/microsoft/MCW-Azure-Synapse-Analytics-and-AI
 
+go through 52,53,54...not complete yet
+
 
 https://github.com/Azure-Samples/Synapse/tree/main/Notebooks
 

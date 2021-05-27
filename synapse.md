@@ -61,7 +61,7 @@ Why?
 * Huge fact tables
   * hash distributed CCI with partitioning if you are sure each partition will have 1 million rows (see above).  Otherwise, don't partition
 * Dims < 60 m rows and > 1 million rows
-  * hash distributed heap
+  * hash distributed clustered index
   * CCI will have no benefit here, rowstore is better
 * small dims (<2GB)
   * replicated table

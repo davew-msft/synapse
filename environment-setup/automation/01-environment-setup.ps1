@@ -252,6 +252,8 @@ Write-Information "Copying sample sales raw data directories from the public dat
 $dataDirectories = @{
         data2018 = "wwi-02/sale-small,wwi-02/sale-small/Year=2018/"
         data2019 = "wwi-02/sale-small,wwi-02/sale-small/Year=2019/"
+        data2020 = "wwi-02/sale-small,wwi-02/sale-small/Year=2020/"
+        data2021 = "wwi-02/sale-small,wwi-02/sale-small/Year=2021/"
 }
 
 foreach ($dataDirectory in $dataDirectories.Keys) {

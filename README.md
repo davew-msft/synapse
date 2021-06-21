@@ -55,14 +55,18 @@ See [Synapse Workspace](./synapse.md)
 
 ### Setup and Prep Labs
 
-* [Lab 000: local development machine setup](./Lab000.md):  You will need some tools installed on your local machine. Let's get those setup.  
-* [Lab 001: setup Synapse workspace](./Lab001.md) and understand a little more about what problems this service is trying to solve
-* [Lab 001a: Setup Source Control Integration](./Lab001a.md) TODO
-* [Lab 002: import sample data into Synapse](./Lab002.md) to get familiar with the workspace UI.  
-* [Lab 003 (Optional): Configure additional users to access a Synapse workspace](./Lab003.md).  You do not need to do this unless everyone in the workshop wants to share access to a single Synapse workspace.  
+| Topic | Lab Name | Description|
+|------|------|------|
+|Setup|[Lab 000: local development machine setup](./Lab000.md)|You will need some tools installed on your local machine. Let's get those setup.  |
+|Setup|[Lab 001: setup Synapse workspace](./Lab001.md)|understand a little more about what problems this service is trying to solve|
+|Setup|[Lab 001a: Setup Source Control Integration](./Lab001a.md)|Never work in Synapse Live Mode|
+|Setup|[Lab 021: Version Control Integration](./Lab021.md)|general best practices when doing Synapse browser-based development|
+|Setup|[Lab 002: import sample data into Synapse](./Lab002.md) |get familiar with the workspace UI.  |
+|Setup|[Lab 003 (Optional): Configure additional users to access a Synapse workspace](./Lab003.md)|You do not need to do this unless everyone in the workshop wants to share access to a single Synapse workspace.  |
 
 ### Working with Linked Services
 * [Lab 005: creating a linked service to another storage account](./Lab005.md) 
+  * skip this lab for now.  
 
 ### Data Discovery and Sandboxing
 
@@ -72,23 +76,19 @@ Understanding data through data exploration is the biggest challenge faced today
 * Spark (databricks or Synapse Spark)
   * If I realize I need something more complex for analysis like python or pandas, or I need to do some ML.  
 
-* [Lab 010: Understanding Data Lakes](./Lab010.md) 
-* [Lab 011: Data Discovery and Sandboxing with SQL Serverless](./Lab011.md) 
-  * we also look at querying CSV and JSON data
-* [Lab 012: Data Discovery and Sandboxing with Spark](./Lab012.md) 
-  * we do basic data lake queries using Spark
-  * we will use Lab 052 for a much deeper dive later
-* [Lab 020: Shared Metadata](./Lab020.md)
-  * the 3 components of a Synapse Workspace share much of their metadata to aid in reuse.  We explore that in this lab.  
-* [Lab 021: Source Control](./Lab021.md)
-
+| Lab Name | Description|
+|------|------|
+|[Lab 010: Understanding Data Lakes](./Lab010.md) |An overview of the structure and purpose of a data lake|
+|[Lab 011: Data Discovery and Sandboxing with SQL Serverless](./Lab011.md) |we also look at querying CSV and JSON data|
+|[Lab 012: Data Discovery and Sandboxing with Spark](./Lab012.md) |<li>we do basic data lake queries using Spark<li>we will use Lab 052 for a much deeper dive later|
+|[Lab 020: Shared Metadata](./Lab020.md)|the 3 components of a Synapse Workspace share much of their metadata to aid in reuse.  We explore that in this lab.  |
 ### ETL/ELT Options
 
 There are a lot of different ways to do ELT/ETL using Synapse.  We'll explore each way in this section:  
 
 | Topic | Lab Name | Description|
 |------|------|------|
-|General Setup|[Lab 050: Understanding Data Factory Best Practices](./Lab050.md)|Even if you are not planning to use ADF/Synapse "Integrate" experience, you will likely want to version control your notebooks and SQL files.  We cover things like gitflow as well.|
+|General Setup|[Lab 050: Understanding Data Factory (Integrate) Best Practices](./Lab050.md)|Even if you are not planning to use ADF/Synapse "Integrate" experience, you will likely want to version control your notebooks and SQL files.  We cover things like gitflow as well.|
 |General Setup|[Lab 051: Best Practices for source controlling SQL scripts](./Lab051.md)|Let's walk through what I think is THE BEST WAY to think about how to do data lake-driven ETL.|
 |General Setup|[**Thinking about how to leverage your data lake to do ETL and exploratory analytics**](./etl_patterns.md)||
 |Spark|[Lab 052:  Manipulating a Data Lake with Spark](./notebooks/Lab052.ipynb)|  <li> Import `./notebooks/Lab052.ipynb` directly in your Synapse workspace under Notebooks. <li> Read the instructions and complete the lab|
@@ -125,6 +125,11 @@ TODO:  load campaign analytics table, might be good for ADF data flows.
 
 * [Lab 400: Consuming a Model in Synapse](./Lab400.md) TODO
 * [Lab 410: Using Cognitive Search with Synapse](./Lab410.md) TODO
+* [Lab 420: Basic ML lifecycle using Spark and Synapse Dedicated Pools](./Lab420.md)  
+* [Lab 421: Train an automl model against an existing Spark dataset](./Lab421.md)
+  * this requires you to complete Lab420.
+* [Lab 422: Use an existing model to batch inference against Synapse Dedicated Pool data](./Lab422.md)
+  * this requires you to complete Lab 420 and Lab 421
 
 ### Monitoring
 

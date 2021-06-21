@@ -2,8 +2,18 @@ search for TODO in this repo
 
 based on:  https://github.com/microsoft/MCW-Azure-Synapse-Analytics-and-AI
 
+sql for etl:  https://github.com/balakreshnan/synapseAnalytics/blob/master/sqlondemand.md
+
+right click file, create external table
+
 go through 52,53,54...not complete yet
 
+from notebookutils import mssparkutils
+mssparkuntils.fs.ls('')
+notebook workflows
+    mssparkutils.notebook.exit("Success")
+    
+cosmos?
 
 https://github.com/Azure-Samples/Synapse/tree/main/Notebooks
 
@@ -82,3 +92,8 @@ WITH
                     ,     First_Row = 2
                     )
 );
+
+
+
+
+

@@ -1,3 +1,19 @@
+/*
+    data
+    browse gallery
+    Covid Tracking Project
+    select top 100
+
+    now CREATE EXTERNAL TABLE on the context menu to load into our datalake
+    see below
+*/
+
+USE sandbox
+GO
+--we need to set sandbox to utf-8 so parquet works properly
+ALTER DATABASE sandbox 
+    COLLATE Latin1_General_100_BIN2_UTF8;
+GO
 IF NOT EXISTS (SELECT * FROM sys.external_file_formats WHERE name = 'SynapseParquetFormat') 
 	CREATE EXTERNAL FILE FORMAT [SynapseParquetFormat] 
 	WITH ( FORMAT_TYPE = PARQUET)
@@ -10,12 +26,13 @@ IF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'public_pand
 	)
 Go
 
-CREATE SCHEMA samples;
+IF NOT EXISTS (select * from sys.schemas where name = 'samples')
+	EXEC('CREATE SCHEMA samples;')
 GO
 
 CREATE EXTERNAL TABLE samples.covid (
 	[date] date,
-	[state] varchar(8000),
+	[state] nvarchar(4000),
 	[positive] int,
 	[negative] int,
 	[pending] smallint,
@@ -26,10 +43,10 @@ CREATE EXTERNAL TABLE samples.covid (
 	[on_ventilator_currently] smallint,
 	[on_ventilator_cumulative] smallint,
 	[recovered] int,
-	[data_quality_grade] varchar(8000),
+	[data_quality_grade] varchar(4000),
 	[last_update_et] datetime2(7),
-	[hash] varchar(8000),
-	[date_checked] varchar(8000),
+	[hash] nvarchar(4000),
+	[date_checked] varchar(4000),
 	[death] smallint,
 	[hospitalized] int,
 	[total] int,
@@ -41,10 +58,10 @@ CREATE EXTERNAL TABLE samples.covid (
 	[negative_increase] int,
 	[positive_increase] smallint,
 	[total_test_results_increase] int,
-	[fips_code] varchar(8000),
-	[iso_subdivision] varchar(8000),
+	[fips_code] nvarchar(4000),
+	[iso_subdivision] varchar(4000),
 	[load_time] datetime2(7),
-	[iso_country] varchar(8000)
+	[iso_country] nvarchar(4000)
 	)
 	WITH (
 	LOCATION = 'curated/covid-19/covid_tracking/latest/covid_tracking.parquet',
@@ -55,4 +72,31 @@ GO
 
 SELECT TOP 100 * FROM samples.covid
 GO
+
+--now I want to make a copy of this data in my datalake.  
+--I want to put this in the raw area of my dl
+IF NOT EXISTS (select * from sys.schemas where name = 'raw')
+	EXEC('CREATE SCHEMA raw;')
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'wwi02') 
+	CREATE EXTERNAL DATA SOURCE [wwi02] 
+	WITH (
+		LOCATION   = 'https://asadatalakedavew891.dfs.core.windows.net/wwi-02', 
+	)
+GO
+
+CREATE EXTERNAL TABLE raw.covid_data
+    WITH (
+        LOCATION = 'raw/covid_data',  
+        DATA_SOURCE = wwi02,  
+        FILE_FORMAT = SynapseParquetFormat  
+    )
+AS
+SELECT TOP 100 * FROM samples.covid;
+GO
+
+--now I can query that external table in my data lake
+select * from raw.covid_data;
+
 

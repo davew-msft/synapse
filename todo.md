@@ -2,7 +2,7 @@ search for TODO in this repo
 
 based on:  https://github.com/microsoft/MCW-Azure-Synapse-Analytics-and-AI
 
-sql for etl:  https://github.com/balakreshnan/synapseAnalytics/blob/master/sqlondemand.md
+
 
 right click file, create external table
 

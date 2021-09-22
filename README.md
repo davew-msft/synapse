@@ -92,11 +92,10 @@ There are a lot of different ways to do ELT/ETL using Synapse.  We'll explore ea
 | Topic | Lab Name | Description|
 |------|------|------|
 |General Setup|[Lab 050: Understanding Data Factory (Integrate) Best Practices](./Lab050.md)|Even if you are not planning to use ADF/Synapse "Integrate" experience, you will likely want to version control your notebooks and SQL files.  We cover things like gitflow as well.|
-|General Setup|[Lab 051: Best Practices for source controlling SQL scripts](./Lab051.md)|Let's walk through what I think is THE BEST WAY to think about how to do data lake-driven ETL.|
+|General Setup|[Lab 051: Best Practices for source controlling SQL scripts](./Lab051.md)|We'll also cover how to handle deployments and database objects.  |
 |Spark|[Lab 052:  Manipulating a Data Lake with Spark](./notebooks/Lab052.ipynb)|  <li> Import `./notebooks/Lab052.ipynb` directly in your Synapse workspace under Notebooks. <li> Read the instructions and complete the lab|
 |Spark|[Lab 053:  Understanding Delta Tables with Spark](./notebooks/Lab053.ipynb)|We'll explore using Delta tables from Synapse Spark pools TODO|
 |Spark|[Lab 054: Sharing Data Between SparkSQL, Scala, and pySpark](./notebooks/Lab054.ipynb)|Using multiple languages in Spark is the key to solving problems, but sharing variables and dataframes isn't always intuitive.  We'll also look at how to persist data so Serverless Pools can access it. WIP/TODO...see version in workspace|
-||||
 ||||
 
 #### Using SQL Serverless

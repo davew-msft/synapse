@@ -112,5 +112,9 @@ serverless query perf monitoring:  https://www.linkedin.com/pulse/troubleshootin
 vscode spark tools:  https://docs.microsoft.com/en-us/azure/synapse-analytics/spark/vscode-tool-synapse#using-the-synapse-pyspark-interactive-command-in-py-file
 
 
+viewgen:  https://www.serverlesssql.com/optimisation/dynamic-view-generation-in-serverless-sql-pools/
+
+cetAS:  https://www.serverlesssql.com/optimisation/using-cetas-in-serverless-sql-pools-to-generate-pre-calculated-datasets-part-2-of-2/
+
 
 

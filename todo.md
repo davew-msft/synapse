@@ -105,6 +105,11 @@ Repo created for the demo of ERP (Professional Services Finance domain) to CDM M
 SQL scripts for Azure Synapse Analytics Serverless SQL Pools
 https://github.com/datahai/serverlesssqlpooltools
 
+pipeline integration testing:  https://medium.com/microsoftazure/integration-testing-azure-synapse-pipelines-and-beyond-876771e77bd7
+
+serverless query perf monitoring:  https://www.linkedin.com/pulse/troubleshooting-performance-serverless-synapse-sql-pool-jovan-popovic/?trackingId=Gwl9NlMCuax6of1ZvmRe8g%3D%3D
+
+vscode spark tools:  https://docs.microsoft.com/en-us/azure/synapse-analytics/spark/vscode-tool-synapse#using-the-synapse-pyspark-interactive-command-in-py-file
 
 
 

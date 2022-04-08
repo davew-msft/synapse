@@ -95,5 +95,17 @@ WITH
 
 
 
+------
+-------
+proserv-cdm-demo. https://github.com/nimar2/proserv-cdm-demo
+Repo created for the demo of ERP (Professional Services Finance domain) to CDM Mapping using Azure Synapse
+
+
+
+SQL scripts for Azure Synapse Analytics Serverless SQL Pools
+https://github.com/datahai/serverlesssqlpooltools
+
+
+
 
 

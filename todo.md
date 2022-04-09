@@ -117,4 +117,12 @@ viewgen:  https://www.serverlesssql.com/optimisation/dynamic-view-generation-in-
 cetAS:  https://www.serverlesssql.com/optimisation/using-cetas-in-serverless-sql-pools-to-generate-pre-calculated-datasets-part-2-of-2/
 
 
+LDW:  https://www.serverlesssql.com/logical-data-warehouse/creating-a-logical-data-warehouse-with-synapse-serverless-sql-part-2-of-3-creating-a-dimensional-model/
+
+covid:  https://github.com/Azure-Samples/Synapse/blob/main/Notebooks/TSQL/Jupiter/content/tutorials/covid-ecdc.ipynb
+
+mcw:  https://github.com/microsoft/MCW-Azure-Synapse-Analytics-and-AI/blob/main/Hands-on%20lab/HOL%20step-by%20step%20-%20Azure%20Synapse%20Analytics%20and%20AI.md
+
+tweets:  https://github.com/Azure-Samples/Synapse/tree/main/Notebooks/Spark.NET%20C%23/Tweets
+
 

@@ -1,0 +1,13 @@
+graphviz
+isodate
+Lifetimes
+lightgbm
+matplotlib
+numpy
+scikit-learn
+scipy
+seaborn
+sidetable
+simple-colors
+sklearn
+sklearn-pandas

@@ -1,12 +1,13 @@
 # Synapse End to End Workshop
 
-https://git.davewentzel.com/workshops/synapse
+https://github.com/davew-msft/synapse
+
+(this repo has branches.  master is currently set to `fb`)
 
 ## What Technologies are Covered
 
 * Synapse workspaces
-* Azure DevOps (AzDO) or GitHub (and gh actions)
-* pretty much every other Azure data service
+* Synapse Spark
 
 ## Target audience
 
@@ -14,53 +15,46 @@ https://git.davewentzel.com/workshops/synapse
 -   Data Scientists
 -   App Developers
 
+## Workshop Agenda & Objectives
 
-## Business Case Background
+**This is a tentative schedule. We may have to adjust given timelines, desires, etc**
+### Day 1
 
-Our company has hundreds of brick and mortar stores. Over the years, they have amassed large amounts of historical data stored in disparate systems.  They wish to combine their historic data and tie it together with near real-time data streams to produce dashboard KPIs and machine learning models that enable them to make informed up to the minute decisions.
+* Introductions/Objectives/Level-Setting
+* Synapse Navigation
+  * [What is Synapse?](./Lab001.md)
+  * Source control integration (do we need to set this up?)
+* Overview and Basic Setup
+  * what is a notebook?  navigation, etc
+  * [Let's make sure you can connect to my sample data lake](./fb-labs/Lab01.md)
 
-Our company has over 5 years and 30 billion rows of transactional sales data in Oracle, finance data stored in SAP Hana, and marketing data in Teradata. They also monitor the data coming in from their social media Twitter account.
+* Data Lake organization
+  * How is your data lake structured?  Connecting to it from a notebook.  
+* Data Sandboxing/Data Engineering
+  * Querying data with SQL and pySpark, data pipelining principles
+* Basic ETL
+  * Extract, Transform, Loading.  Delta-formatted tables
 
-They need a solution that allows them to query across and analyze the data from all these sources. Regardless of volume, they want these queries to return in seconds.
+### Day 2
 
-Our company has 100 stores each equipped with 50 IoT sensors that monitor customer behavior in the store aisles. They need to ingest sensor data in near real time to allow them to quickly identify patterns that can be shared between stores in an aim to improve sales with last minute offers and improved product placement.
+* Continuation of topics from Day 1
+* Streaming Data
+  * Real-time streaming data pipelines with Spark Structured Streaming.  Take a batch process and make it stream.  We start with the data already in Bronze
+* Streaming data from Kafka/Event Hubs
+  * Streaming data using Event Hubs and Kafka.  
 
+### Day 3
 
+* Continuation of topics from Day 1 & 2
+* Orchestrating and Administering Jobs
+  * Streaming and Batch orchestration with Jupyter Notebooks and ADF
+* Data Science with Spark
+* Performance Tuning and administration
+  * What are the common performance issues we see and what are the patterns to fix them?  
 
-## Workshop Objectives
-
-we will try to build an end-to-end solution using Azure Synapse Analytics. The workshop will cover:
-* data loading
-* data preparation
-* data transformation
-* data serving
-* machine learning
-* batch data
-* streaming data
-
-We will try to do everything using the same datasets, but can't guarantee it.  
-
-We want to build something like this:
-
-![](./img/mdw.png)
-... this is a "reference architecture" for a standard `corporate information factory` which focuses on a Synapse-based implementation (aka "SQL-focused" solution).  But this of course is not the only way to do things.  In fact, if you want to think of your data in terms of "streams" this may be a better way to think of your data:
-![](./img/stream.png)
-...note that here we are using other technologies to process the stream data before it "comes to rest".  These are not the ONLY technologies to process streaming data, in fact, they may not even be the best.  
-
-## What is Synapse Data Warehouse?
-
-See [Synapse Workspace](./synapse.md)
-
-## Workshop Agenda
-
-### Setup and Prep Labs
 
 | Topic | Lab Name | Description|
 |------|------|------|
-|Setup|[Lab 000: local development machine setup](./Lab000.md)|You will need some tools installed on your local machine. Let's get those setup.  |
-|Setup|[Lab 001: setup Synapse workspace](./Lab001.md)|understand a little more about what problems this service is trying to solve|
-|Setup|[Lab 001a: Setup Source Control Integration](./Lab001a.md)|Never work in Synapse Live Mode|
-|Setup|[Lab 021: Version Control Integration](./Lab021.md)|general best practices when doing Synapse browser-based development|
 |Setup|[Lab 002: import sample data into Synapse](./Lab002.md) |get familiar with the workspace UI.  |
 |Setup|[Lab 003 (Optional): Configure additional users to access a Synapse workspace](./Lab003.md)|You do not need to do this unless everyone in the workshop wants to share access to a single Synapse workspace.  |
 

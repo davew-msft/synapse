@@ -76,6 +76,9 @@ df_parquet.show(10)
   * variables and notbook pipelining
   * [Lab 020: Shared Metadata](./Lab020.md)
   
+
+
+
   
 * Streaming Data
   * Real-time streaming data pipelines with Spark Structured Streaming.  Take a batch process and make it stream.  We start with the data already in Bronze
@@ -86,6 +89,10 @@ df_parquet.show(10)
 
 ### Day 3
 
+* [Delta Continuation](./fb-labs/01-DeltaLake.ipynb)
+
+
+### Other Possible Topics
 * Continuation of topics from Day 1 & 2
 * SHIR and Synapse pipelines to reach back on-prem
 * Streaming data from Kafka/Event Hubs

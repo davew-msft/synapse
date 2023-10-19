@@ -4,6 +4,9 @@ https://github.com/davew-msft/synapse
 
 (this repo has branches.  master is currently set to `fb`)
 
+[Synapse Performance Notes](./perf/README.md)
+[Dockerized Spark Containers](./perf/containers.md)
+
 ## What Technologies are Covered
 
 * Synapse workspaces
@@ -76,7 +79,6 @@ df_parquet.show(10)
   * variables and notbook pipelining
   * [Lab 020: Shared Metadata](./Lab020.md)
   
-
 
 
   
